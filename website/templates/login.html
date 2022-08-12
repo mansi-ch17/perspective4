@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+ {% block head %}
+ <title>Login page</title>
+  <link rel="stylesheet" href="../static/login.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Cookie&family=Edu+QLD+Beginner&family=Itim&display=swap" rel="stylesheet">
+ {% endblock %} 
+ {% block content%}
+    <form method="POST">
+      
+      <div class="form-group">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="font-family: 'Cookie', cursive;">Start Exploring!</h1>
+        
+            <label for="email" style="font-family: 'Acme', sans-serif;">Institute email id</label>
+            <br>
+            <input type="text" id= "email" name="email" class="form-control" placeholder="Email id">
+            <br>
+            <label for="password" style="font-family: 'Acme', sans-serif;">Password</label>
+            <br>
+            <input type="password" id ="password" name="password" class="form-control" placeholder="Password">
+            <br>
+            <button type="submit">Login</button>
+        
+    </div>
+    </form>
+
+         
+    {% endblock %}

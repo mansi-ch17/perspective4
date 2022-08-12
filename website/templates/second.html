@@ -1,0 +1,28 @@
+{% block head %} 
+<title>Login/Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/second.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+{% endblock %} 
+{% block content%}
+<p class="text" style="font-family: 'Cookie', cursive;font-size: 40px;">Just one step away from being a part of our Community!!</p>
+
+    <div class="first">
+      <div class="second">
+        <button type="submit" style="background-color: white; height: 60px;border-radius: 20px;">
+          <a href="login.html"span style="font-size: 40px; padding: 10px; font-family: 'Acme', sans-serif;">Login</span></a>
+        </button>
+      </div>
+      <div class="third">
+        <button type="submit" style="background-color: white; height: 60px;border-radius: 20px;">
+          <a href="signup.html" span style="font-size: 40px; padding: 10px; font-family: 'Acme', sans-serif;">SignUp</span></a>
+        </button>
+      </div>
+    </div>
+    {% endblock %}

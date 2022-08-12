@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    {%endblock%}
+    {% block content%}
+  
+    <div class="page">
+      <div class="whole">
+        <nav class="navbar navbar-expand-lg">
+          
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <center style="margin-left:30px ;">
+                  <li class="nav-item">
+                    <div class="one"><a href="myprofile.html"><img src="../static/profile-removebg-preview.png" /></a></div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="two"><a href="homefeed.html"><img src="../static/home-removebg-preview.png" /></a></div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="three"><a href="search.html"><img src="../static/search-removebg-preview.png" /></a></div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="four"><a href="write.html"><img src="../static/note-removebg-preview.png" /></a></div>
+                  </li>
+                </center>
+              </ul>
+            </div>
+        </nav>
+        </div>
+      <div class="middle">
+        <center
+          style="
+            font-size: 65px;
+            font-family: 'Cookie', cursive;
+          "
+        >
+          {{user.name}}'s Profile
+        </center>
+        <hr align="center" size="6px" color="black" />
+        <div class="logo">
+          <center>
+            <img src="../static/Screenshot (567).png" width="100px" height="100px" />
+          </center>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+        <div class="name" style="font-size:25px;  font-family: 'Acme', sans-serif; margin-left: 10px;">
+          Name: &nbsp;&nbsp;
+         <span style="font-family: sans-serif;font-size:20px;"> {{user.name}}</span>
+        </div><br>
+        <br>
+        <div class="mail" style="font-size:25px;font-family: 'Acme', sans-serif;margin-left: 10px;">
+          Email: &nbsp;&nbsp;
+          
+          <span style="font-family: sans-serif;font-size:20px;">{{user.email}}</span>
+        </div><br>
+        <br>
+        <div class="bio" style="font-size:25px; font-family: 'Acme', sans-serif;margin-left: 10px;">
+          Posts written by author: &nbsp;&nbsp;
+           
+
+          <br />
+            {%for post in posts %}
+            <span style="font-family: 'Acme', sans-serif;font-size:20px; ">
+            <a href="/{{post.heading}}">{{post.heading}} </a>
+            </span>
+            <span style="font-family: sans-serif;font-size:15px; ">
+            {{post.date_created}}<br>
+            </span>
+
+          
+          {%endfor%}
+        
+        </div>
+      </div>
+      
+      <div class="third">
+        <nav class="navbar navbar-expand-lg">
+      
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <center>
+        <li class="nav-item">
+          <img src="../static/Screenshot (544).png" width="150px" height="150px" /></li>
+          <br />
+          <li class="nav-item"><p style="padding-top: 150px; padding-left: 30px; word-spacing: 5px">
+           <b> <a href="saved.html">Your Saved List</a></b>
+              <img src="../static/Screenshot (546).png" width="20px" height="20px"
+            />
+          </p></li>
+          <li class="nav-item"><p
+            style="
+              word-spacing: 15px;
+              padding-top: 150px;
+              padding-left: 30px;
+              font-family: 'Acme', sans-serif;
+            "
+          >
+          <a href="about.html">About</a>
+          <a href="terms.html">Terms</a>
+          </p></li>
+      </center>
+      </ul>
+    </div>
+    </nav>
+    </div>
+    </div>
+    {% endblock %}

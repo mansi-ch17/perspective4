@@ -1,0 +1,39 @@
+body {
+    background-image: url('../static/loginpic.jpeg')  ;
+    background-size: cover;
+}
+.whole {
+    margin-left: 10px;
+    margin-top: 50px;
+    
+}
+.whole h1 {
+    font-size: 50px;
+    margin-left: 150px;
+    
+}
+.whole p {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.form-control{
+    width:50%
+}
+.whole input {
+    width: 400px;
+    height: 30px;
+    margin-left: 50px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: black;
+
+}
+.whole button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: black;
+    margin-top: 20px;
+    margin-left: 350px;
+}

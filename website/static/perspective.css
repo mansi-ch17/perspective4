@@ -1,0 +1,246 @@
+body{
+    /* background-image: url('C:/Users/Nivedita/OneDrive/Desktop/IITISOC images/bg6.jpg')  ; */
+    background-image: url('../static/bgc.png')  ;
+
+
+    background-repeat: no-repeat;
+    background: cover;
+
+
+}
+.logo{
+    margin-top: 23px;
+    margin-left: 106px;
+    margin-bottom: -626px;
+    text-shadow: 2px 2px #a7a4a4;
+    animation: movedown 1s linear 1;
+    
+}
+.quote{
+    margin-left: 571px;
+    margin-top: -290px;
+    margin-bottom: -38px;
+}
+.home{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    border: solid 5px black ;
+    border-radius: 20px;
+    background-color: #b7e1ea;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.write{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.name{
+    margin-left: 712px;
+    display: block;
+    margin-top: 171px;
+    font-size: 52px;
+    color:  black;
+    margin-bottom: -51px;
+z-index: -1;
+    /*text-shadow: 2px 2px #a7a4a4;*/
+
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    
+
+}
+@keyframes movedown{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.tagline{
+    margin-left: 200px;
+    display: block;
+    margin-top: -57px;
+    font-size: 35px;
+    color: #b7e1ea;
+    /* text-shadow: 2px 2px #a7a4a4; */
+    font-family: 'Cookie', cursive;
+    z-index: -1;
+
+}
+button{
+    margin-left: -550px;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Itim', cursive;
+    font-size: 21px;
+    margin-bottom: 33px;
+    text-decoration: none;
+}
+.btn {
+    margin-left: 594px;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Itim', cursive;
+    font-size: 21px;
+    margin-bottom: 33px;
+    text-decoration: none;
+}
+
+button:hover{
+    cursor: pointer;
+    color: blue;
+}
+h1{
+    margin-top: 17px;
+    margin-left: 94px;
+    font-size: 55px;
+    font-family: 'Cookie', cursive;
+    margin-bottom: 60px;
+}
+.head{
+    margin-top: -418px;
+    margin-left: 504px;
+    font-size: 55px;
+    font-family: 'Cookie', cursive;
+    margin-bottom: 402px;
+}
+/* topics on which blog is available */
+.con{
+    border: solid 5px black;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+margin-left: 50px;
+margin-right: 50px;
+margin-top: 40px;
+/* background: url('C:/Users/Nivedita/OneDrive/Desktop/IITISOC images/bg11.jpg'); */
+background: url('../static/bge.png');
+background-repeat: no-repeat;
+
+
+}
+/* Features */
+.find{
+margin-top: 30px;
+margin-left: 30px;
+margin-bottom: 151px;
+}
+.features{
+    margin-top: -348px;
+    margin-left: 484px;
+    font-size: 26px;
+    font-family: 'Acme', sans-serif;
+
+
+}
+.read{
+    margin-top: 100px;
+    margin-left: 698px;
+}
+.topics{
+margin-left: 50px;
+margin-right: 50px;
+text-align: center;
+border: solid 5px black;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+margin-top: 40px;
+/* background: url('C:/Users/Nivedita/OneDrive/Desktop/IITISOC images/bg11.jpg'); */
+background: url('../static/bge.png');
+background-repeat: no-repeat;
+
+}
+.img1{
+    margin-left: -552px;
+    margin-top: -160px;
+    margin-bottom: -87px;
+}
+/* .img2{
+    margin-left: 612px;
+    margin-top: -160px;
+    margin-bottom: 52px;
+} */
+.genre{
+    margin-top: 62px;
+    margin-left: 100px;
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+.genre li{
+    border: solid black;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: -50px;
+    margin-right: 333px;
+    background-color:#7e7ad1;
+    box-shadow: 0 4px 8px 0 rgba(40, 12, 12, 0.78), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    font-size: 20px;
+
+font-family: 'Itim', cursive;
+
+}
+.pic1{
+    margin-left: 568px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.pic2{
+    margin-left: 23px;
+    margin-bottom: 45px;
+    margin-top: -357px;
+}
+.img{
+    margin-left: -13px;
+    margin-top: 115px;
+    padding: 5px;
+}
+.desc{
+    border: solid black;
+    padding: 51px;
+    margin-top: -206px;
+    border-radius: 57px;
+    margin-left: 656px;
+    margin-right: 187px;
+    background-color: #a9cacb;
+    font-family: 'Cookie', cursive;
+font-size: 25px;
+margin-bottom: 150px;
+}
+.details{
+    background:black;
+    border-radius: 5px;
+    margin-top: 60px;
+color: white;
+font: 15px;
+}
+.center{
+    background:black;
+ color: aliceblue;
+ margin-left: 2px;
+}
+.pic{
+    margin-top: -6px;
+    padding: 5px;
+    margin-left: -14px;
+    /* border: solid black; */
+    border-radius: 5px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   */
+}  
+.para{
+    margin-top: 100px;
+    margin-left: 758px;
+    padding: 10px;
+    border: solid black;
+    margin-bottom: 100px;
+
+    border-radius: 10px;
+    margin-right: 107px;
+    background-color: #a9cacb;
+
+} 

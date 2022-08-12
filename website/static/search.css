@@ -1,0 +1,39 @@
+.whole {
+    background-color: #b7e1ea;
+    width: 10%;
+    margin-left: -50px;
+    height: 690px;
+    float: left;
+}
+.total 
+{
+    float: left;
+    width: 75%;
+}
+.one {
+    padding-top: 120px;
+}
+.two {
+    padding-top: 80px;
+}
+.three {
+    padding-top: 80px;
+}
+.four {
+    padding-top: 80px;
+}
+.third {
+    background-color: #b7e1ea;
+    width: 15%;
+    height: 690px;
+    float: right;
+    margin-right: -50px;
+}
+#tags {
+    background-color: #b7e1ea; 
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+    border-radius: 20px; 
+    padding: 10px;
+
+}

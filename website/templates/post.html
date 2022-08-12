@@ -1,0 +1,261 @@
+{% extends "base.html" %} {% block head %}
+<title>Post Page</title>
+<link rel="stylesheet" type="text/css" href="../static/Post.css" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+  rel="stylesheet"
+/>
+{% endblock %} {% block content%}
+
+<div class="whole">
+  <nav class="navbar navbar-expand-lg">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <center style="margin-left: 30px">
+          <li class="nav-item">
+            <div class="one">
+              <a href="myprofile.html"
+                ><img src="../static/profile-removebg-preview.png"
+              /></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="two">
+              <a href="homefeed.html"
+                ><img src="../static/home-removebg-preview.png"
+              /></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="three">
+              <a href="search.html"
+                ><img src="../static/search-removebg-preview.png"
+              /></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="four">
+              <a href="write.html"
+                ><img src="../static/note-removebg-preview.png"
+              /></a>
+            </div>
+          </li>
+        </center>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="total">
+  {%for post in posts%} {%if post.heading==heading%}
+
+  <center style="font-size: 40px; font-family: 'Acme', sans-serif">
+    <u>{{post.heading}}</u><br />
+    <span style="justify-content: left; font-size: 20px"
+      >{{post.date_created}}</span
+    >
+    <br />
+  </center>
+  <center>
+    <a href="/tosave/{{post.heading}}"
+      ><button
+        type="submit"
+        style="background-color: #b7e1ea; border-radius: 20px; height: 40px"
+      >
+        <span
+          style="
+            font-size: 20px;
+            padding: 10px;
+            font-family: 'Acme', sans-serif;
+          "
+          >Save</span
+        >
+      </button></a
+    >
+  </center>
+  <hr align="center" size="10px" color="#000000"/>
+
+  <div class="niv">
+    <div class="nivi">
+      {%if post.tags=="finance"%}
+      <img src="../static/finance.jpeg" width="950px" height="450px" />
+      {%endif%} {%if post.tags=="college life"%}
+      <img src="../static/college life.png" width="950px" height="550px" />
+      {%endif%} {%if post.tags=="motivation"%}
+      <img src="../static/motivation.jpeg" width="950px" height="400px" />
+      {%endif%} {%if post.tags=="dance"%}
+      <img src="../static/dance.jpeg" width="950px" height="500px" />
+      {%endif%} {%if post.tags=="drama"%}
+      <img src="../static/drama.jpeg" width="950px" height="450px" />
+      {%endif%} {%if post.tags=="music"%}
+      <img src="../static/music.png" width="950px" height="400px" />
+      {%endif%} {%if post.tags=="games"%}
+      <img src="../static/games.jpeg" width="950px" height="500px" />
+      {%endif%} {%if post.tags=="technology"%}
+      <img src="../static/technology.jpeg" width="950px" height="300px" />
+      {%endif%} {%if post.tags=="life"%}
+      <img src="../static/life.png" width="950px" height="900px" />
+      {%endif%}
+    </div>
+    <center style="line-height: 1.5; font-size: 20px; padding-top: 40px">
+      {%if post.formatting=="bold"%}
+      <b>{{post.text}}</b>
+      {%endif%} {%if post.formatting=="italics"%}
+      <i>{{post.text}}</i>
+      {%endif%} {%if post.formatting=="none"%} {{post.text}} {%endif%}
+    </center>
+    <hr align="center" size="6px" color="black" />
+    <h4>Tag:</h4>
+    {{post.tags}}
+    <br />
+    <hr align="center" size="6px" color="black" />
+    <h4>Comment Section:</h4>
+    <div class="middle">
+      <center
+        style="
+          font-size: 50px;
+          font-family: 'Cookie', cursive;
+          text-align: left;
+        "
+      ></center>
+
+      <div class="rects">
+        <form method="POST">
+          <textarea
+            name="text"
+            id="text"
+            class="form-control"
+            placeholder="Comment Something.."
+            style="
+              width: 100%;
+              height: 40px;
+
+              font-size: 15px;
+            "
+          ></textarea>
+          <br />
+          <a href="/{{post.heading}}"
+            ><button
+              type="submit"
+              style="
+                background-color: #b7e1ea;
+                border-radius: 20px;
+                height: 40px;
+              "
+            >
+              <span
+                style="
+                  font-size: 20px;
+                  padding: 10px;
+                  font-family: 'Acme', sans-serif;
+                "
+                >Comment</span
+              >
+            </button></a
+          >
+        </form>
+      </div>
+      <hr align="center" size="3px" color="black" />
+      <u><h6>Comments on this post:</h6></u>
+
+      {%for comment in post.comments%} {%if post.heading==heading%}
+      <b>{{comment.user.name}}</b> : {{comment.text}}, {{comment.date_created}}
+      <br />
+      {%endif%} {%endfor%}
+
+      <br />
+    </div>
+  </div>
+</div>
+<div class="third">
+  <nav class="navbar navbar-expand-lg">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <center>
+          <li class="nav-item" style="padding-left: 50px;padding-top: 50px;">
+            <img
+              src="../static/Screenshot (544).png"
+              width="150px"
+              height="150px"
+            />
+            <br />
+          </li>
+          <li class="nav-item" style="padding-top: 70px;padding-left: 50px;">
+            <span style="font-size: 30px; font-family: 'Cookie', cursive; ">
+              Author</span
+            >
+            <br />
+            <img
+              src="../static/Screenshot (554).png"
+              width="70px"
+              height="70px"
+            />
+            <br />
+          </li>
+          <li class="nav-item">
+            <span style="font-size: 30px; font-family: 'Cookie', cursive; padding-left: 50px;"
+              ><a href="/{{post.user.name}}">{{post.user.name}} </a></span
+            >
+
+            <br />
+
+            {%endif%} {%endfor%}
+          </li>
+
+          <li class="nav-item">
+            <p
+              style="padding-top: 70px; padding-left: 50px; word-spacing: 5px"
+            >
+              <b>
+                <b><a href="saved.html">Your Saved List</a></b>
+                <img
+                  src="../static/Screenshot (546).png"
+                  width="20px"
+                  height="20px"
+              /></b>
+            </p>
+          </li>
+          <li class="nav-item">
+            <p
+              style="
+                word-spacing: 15px;
+                padding-top: 70px;
+                padding-left: 50px;
+                font-family: 'Acme', sans-serif;
+              "
+            >
+              <a href="about.html">About</a>
+              <a href="terms.html">Terms</a>
+            </p>
+          </li>
+        </center>
+      </ul>
+    </div>
+  </nav>
+</div>
+{% endblock %}

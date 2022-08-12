@@ -1,0 +1,30 @@
+.whole {
+    background-color: #b7e1ea;
+    width: 10%;
+    height: 690px;
+    float: left;
+}
+.middle 
+{
+    float: left;
+    width: 75%;
+}
+.one {
+    padding-top: 120px;
+}
+.two {
+    padding-top: 80px;
+}
+.three {
+    padding-top: 80px;
+}
+.four {
+    padding-top: 80px;
+}
+.third {
+    background-color: #b7e1ea;
+    width: 20%;
+    margin-right: -50px;
+    height: 690px;
+    float: right;
+}

@@ -1,0 +1,64 @@
+.whole {
+    background-color: #b7e1ea;
+    width: 12%;
+    height: 690px;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.whole ul li a {
+    margin-left: 30px;
+    padding: 0 30px;
+}
+.total 
+{
+    float: left;
+    width: 75%;
+    padding-left: 80px;
+}
+.shadow {
+    width: 250%;
+    background-color: #D1F7FC;
+}
+
+.third {
+    background-color: #b7e1ea;
+    width: 20%;
+    height: 690px;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.one {
+    padding-top: 120px;
+}
+.two {
+    padding-top: 80px;
+}
+.three {
+    padding-top: 80px;
+}
+.four {
+    padding-top: 80px;
+}
+.stories {
+    margin-left: 100px;
+    display: flex;
+}
+.niv {
+  width: 300px;
+}
+.man {
+  width: 300px;
+  padding-left: 150px;
+}
+.nivi {
+padding-top: 50px;
+}
+.mani {
+    padding-top: 50px;
+}
